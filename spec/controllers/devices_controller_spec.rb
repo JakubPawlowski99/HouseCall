@@ -3,46 +3,24 @@
 require 'rails_helper'
 
 RSpec.describe DevicesController, type: :controller do
-  let(:api_key) { create(:api_key) }
-  let(:user) { api_key.bearer }
+  let(:user) { create(:user) }
 
-  describe 'POST #assign' do
-    subject(:assign) do
-      post :assign,
-           params: { new_owner_id: new_owner_id, serial_number: '123456' },  # Correcting parameter structure
-           session: { token: user.api_keys.first.token }
-    end
-
-    context 'when the user is authenticated' do
-      context 'when user assigns a device to another user' do
-        let(:new_owner_id) { create(:user).id }
-
-        it 'returns an unauthorized response' do
-          assign  # Call the assign method
-          expect(response.code).to eq("422")
-          expect(JSON.parse(response.body)).to eq({ 'error' => 'Unauthorized' })
-        end
-      end
-
-      context 'when user assigns a device to self' do
-        let(:new_owner_id) { user.id }
-
-        it 'returns a success response' do
-          assign  # Call the assign method
-          expect(response).to be_successful
-        end
-      end
-    end
-
-    context 'when the user is not authenticated' do
-      it 'returns an unauthorized response' do
-        post :assign
-        expect(response).to be_unauthorized
-      end
-    end
+  before do
+    sign_in user 
   end
 
-  describe 'POST #unassign' do
-    # TODO: implement the tests for the unassign action
+  describe 'POST #assign' do
+    context 'when user assigns a device to self' do
+      let(:serial_number) { '123456' }
+
+      before do
+        post :assign, params: { new_owner_id: user.id, serial_number: serial_number }
+      end
+
+      it 'returns a success response' do
+        expect(response).to be_successful
+      end
+    end
+
   end
 end

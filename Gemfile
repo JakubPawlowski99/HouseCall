@@ -24,7 +24,7 @@ gem "puma", ">= 5.0"
 gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -34,23 +34,20 @@ gem "bootsnap", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
-gem 'rspec'
-gem 'faker'
 
+# RSpec and related gems
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
-  gem 'rspec-rails'
-  gem 'pry-rails'
+  gem "rspec-rails"  # Include RSpec Rails for testing
+  gem 'faker'        # Generate fake data
+  gem 'pry-rails'    # For debugging
+  gem "debug", platforms: %i[mri windows]
+  gem 'devise'
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'factory_bot_rails'
+  gem 'database_cleaner'      # For cleaning the database in tests
+  gem 'factory_bot_rails'     # For using Factory Bot with Rails
 end
 
-group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-end
-
+# Uncomment the following line if you're using the latest version of RSpec
+# gem 'rspec', '~> 3.13.1' # Uncomment this line if you want to specify the version explicitly
