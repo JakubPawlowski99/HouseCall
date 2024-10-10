@@ -2,17 +2,34 @@
 
 class DevicesController < ApplicationController
   before_action :authenticate_user!, only: %i[assign unassign]
+
   def assign
-    AssignDeviceToUser.new(
-      requesting_user: @current_user,
-      serial_number: params[:serial_number],
-      new_device_owner_id: params[:new_device_owner_id]
-    ).call
-    head :ok
+    begin
+      result = AssignDeviceToUser.new(
+        requesting_user: @current_user,
+        serial_number: params[:serial_number],
+        new_device_owner_id: params[:new_owner_id]
+      ).call
+      if result
+        head :ok
+      else
+        render json: { error: 'Assignment failed' }, status: :unprocessable_entity
+      end
+    rescue RegistrationError::Unauthorized => e
+      Rails.logger.error "Unauthorized error: #{e.message}"
+      render json: { error: 'Unauthorized' }, status: :unprocessable_entity
+    rescue StandardError => e
+      Rails.logger.error "Unexpected error: #{e.message}"
+      render json: { error: 'Unexpected error' }, status: :internal_server_error
+    end
   end
 
   def unassign
-    # TODO: implement the unassign action
+    UnassignDeviceFromUser.new(
+      requesting_user: @current_user,
+      serial_number: params[:serial_number]
+    ).call
+    head :ok
   end
 
   private
