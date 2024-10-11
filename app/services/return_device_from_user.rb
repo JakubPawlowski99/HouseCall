@@ -13,7 +13,5 @@ class ReturnDeviceFromUser
     device.update!(user_id: nil)
 
     DeviceHistory.create!(user: @user, device: device, action: 'returned')
-
-    puts "Device returned: #{device.serial_number}, User: #{@user.id}, Action: 'returned'"
   end
 end
