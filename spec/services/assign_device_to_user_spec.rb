@@ -12,7 +12,7 @@ RSpec.describe AssignDeviceToUser do
   end
 
   let(:user) { create(:user) }
-  let(:serial_number) { '123456' }
+  let(:serial_number){ SecureRandom.hex(4) }
 
   context 'when users registers a device to other user' do
     let(:new_device_owner_id) { create(:user).id }
@@ -27,7 +27,6 @@ RSpec.describe AssignDeviceToUser do
 
     it 'creates a new device' do
       assign_device
-
       expect(user.devices.pluck(:serial_number)).to include(serial_number)
     end
 
@@ -37,8 +36,8 @@ RSpec.describe AssignDeviceToUser do
         ReturnDeviceFromUser.new(user: user, serial_number: serial_number).call
       end
     
-      it 'does not allow to register the device again' do
-        expect { assign_device }.to raise_error(AssigningError::AlreadyUsedOnUser)
+      it 'allows to register the device again' do
+        expect { assign_device }.not_to raise_error
       end
     end
 

@@ -7,16 +7,13 @@ class ReturnDeviceFromUser
   end
 
   def call
-    device = Device.find_by(serial_number: @serial_number)
+    device = Device.find_by(serial_number: @serial_number, user: @user)
+    raise AssigningError::DeviceNotFound if device.nil?
 
-    if device && device.user_id == @user.id
-      device.update!(user_id: nil)
+    device.update!(user_id: nil)
 
-      DeviceHistory.create!(user: @user, device: device, action: 'returned')
-    elsif device
-      raise AssigningError::AlreadyUsedOnOtherUser
-    else
-      raise AssigningError::DeviceNotFound
-    end
+    DeviceHistory.create!(user: @user, device: device, action: 'returned')
+
+    puts "Device returned: #{device.serial_number}, User: #{@user.id}, Action: 'returned'"
   end
 end
