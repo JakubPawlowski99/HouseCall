@@ -7,13 +7,15 @@ class ReturnDeviceFromUser
   end
 
   def call
-    device = Device.find_by(serial_number: @serial_number, user_id: @user.id)
-    
-    if device
+    device = Device.find_by(serial_number: @serial_number)
+
+    if device && device.user_id == @user.id
       device.update!(user_id: nil)
       ReturnedDevice.create!(user: @user, device: device)
-    else
+    elsif device
       raise AssigningError::AlreadyUsedOnOtherUser
+    else
+      raise AssigningError::DeviceNotFound
     end
   end
 end
