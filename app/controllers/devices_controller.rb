@@ -25,11 +25,10 @@ class DevicesController < ApplicationController
   end
 
   def unassign
-    UnassignDeviceFromUser.new(
-      requesting_user: @current_user,
-      serial_number: params[:serial_number]
-    ).call
-    head :ok
+    ReturnDeviceFromUser.new(user: @requesting_user, serial_number: @serial_number).call
+    render json: { success: true }, status: :ok
+  rescue AssigningError::AlreadyUsedOnOtherUser
+    render json: { error: 'Unauthorized' }, status: :unprocessable_entity
   end
 
   private
