@@ -11,15 +11,18 @@ class AssignDeviceToUser
     raise RegistrationError::Unauthorized if @requesting_user.id != @new_device_owner_id
 
     device = Device.find_by(serial_number: @serial_number)
+    raise AssigningError::DeviceNotFound if device.nil?
 
-    if device && device.user_id != nil
-      raise AssigningError::AlreadyUsedOnOtherUser
-    end
-
-    if ReturnedDevice.where(user: @requesting_user, device: device).exists?
+    if DeviceHistory.where(user: @requesting_user, device: device, action: 'returned').exists?
       raise AssigningError::AlreadyUsedOnUser
     end
 
-    Device.create!(serial_number: @serial_number, user_id: @requesting_user.id)
+    if device.user_id.present? && device.user_id != @requesting_user.id
+      raise AssigningError::AlreadyUsedOnOtherUser
+    end
+
+    device.update!(user: @requesting_user)
+
+    DeviceHistory.create!(user: @requesting_user, device: device, action: 'assigned')
   end
 end

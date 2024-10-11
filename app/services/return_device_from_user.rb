@@ -11,7 +11,8 @@ class ReturnDeviceFromUser
 
     if device && device.user_id == @user.id
       device.update!(user_id: nil)
-      ReturnedDevice.create!(user: @user, device: device)
+
+      DeviceHistory.create!(user: @user, device: device, action: 'returned')
     elsif device
       raise AssigningError::AlreadyUsedOnOtherUser
     else
