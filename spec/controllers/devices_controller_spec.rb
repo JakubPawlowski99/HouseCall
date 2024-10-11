@@ -54,7 +54,45 @@ RSpec.describe DevicesController, type: :controller do
     end
   end
 
-  describe 'POST #unassign' do
-    # TODO: implement the tests for the unassign action
+    describe 'POST #unassign' do
+    subject(:unassign) do
+      post :unassign, params: { serial_number: '123456' }, session: { token: user.api_keys.first.token }
+    end
+
+    before do
+      allow(ReturnDeviceFromUser).to receive(:new).and_return(return_device_service)
+    end
+
+    let(:return_device_service) { instance_double(ReturnDeviceFromUser) }
+
+    context 'when the user is authenticated' do
+      before do
+        allow(return_device_service).to receive(:call).and_return(true)
+      end
+
+      it 'returns a success response' do
+        unassign
+        expect(response).to be_successful
+      end
+
+      context 'when the user tries to unassign a device they do not own' do
+        before do
+          allow(return_device_service).to receive(:call).and_raise(AssigningError::AlreadyUsedOnOtherUser)
+        end
+
+        it 'returns an unauthorized response' do
+          unassign
+          expect(response.code).to eq('422')
+          expect(JSON.parse(response.body)).to eq({ 'error' => 'Unauthorized' })
+        end
+      end
+    end
+
+    context 'when the user is not authenticated' do
+      it 'returns an unauthorized response' do
+        post :unassign
+        expect(response).to be_unauthorized
+      end
+    end
   end
 end
