@@ -9413,3 +9413,959 @@ Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms | Allocations: 316)
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (1.5ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (1.9ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (2.1ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (2.1ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (2.0ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (1.5ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user1@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:50.897235"], ["updated_at", "2024-10-11 19:59:50.897235"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user2@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:50.912794"], ["updated_at", "2024-10-11 19:59:50.912794"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.3ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 2], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 19:59:50.921118"], ["updated_at", "2024-10-11 19:59:50.921118"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.2ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 2], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#assign as HTML
+  Parameters: {"new_owner_id"=>"1", "serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unauthorized error: RegistrationError::Unauthorized
+Completed 422 Unprocessable Content in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1606)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user3@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.007992"], ["updated_at", "2024-10-11 19:59:51.007992"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.009188"], ["updated_at", "2024-10-11 19:59:51.009188"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#assign as HTML
+  Parameters: {"new_owner_id"=>"1", "serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 597)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by DevicesController#assign as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms | Allocations: 388)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user4@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.018381"], ["updated_at", "2024-10-11 19:59:51.018381"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.019332"], ["updated_at", "2024-10-11 19:59:51.019332"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#unassign as HTML
+  Parameters: {"serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 617)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user5@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.025400"], ["updated_at", "2024-10-11 19:59:51.025400"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.026511"], ["updated_at", "2024-10-11 19:59:51.026511"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#unassign as HTML
+  Parameters: {"serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 619)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by DevicesController#unassign as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.1ms | Allocations: 316)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user17@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.095601"], ["updated_at", "2024-10-11 19:59:51.095601"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user18@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.097720"], ["updated_at", "2024-10-11 19:59:51.097720"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user19@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.100602"], ["updated_at", "2024-10-11 19:59:51.100602"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "def964f9"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "def964f9"], ["created_at", "2024-10-11 19:59:51.102010"], ["updated_at", "2024-10-11 19:59:51.102010"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.104209"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 19:59:51.105115"], ["updated_at", "2024-10-11 19:59:51.105115"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Pluck (0.0ms)[0m  [1m[34mSELECT "devices"."serial_number" FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user20@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.111594"], ["updated_at", "2024-10-11 19:59:51.111594"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "2c329cc8"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "2c329cc8"], ["created_at", "2024-10-11 19:59:51.112871"], ["updated_at", "2024-10-11 19:59:51.112871"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.114271"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 19:59:51.115063"], ["updated_at", "2024-10-11 19:59:51.115063"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "2c329cc8"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.116217"], ["user_id", nil], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["created_at", "2024-10-11 19:59:51.116992"], ["updated_at", "2024-10-11 19:59:51.116992"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user21@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.120149"], ["updated_at", "2024-10-11 19:59:51.120149"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "8f5d1e09"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "8f5d1e09"], ["created_at", "2024-10-11 19:59:51.121436"], ["updated_at", "2024-10-11 19:59:51.121436"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.123221"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 19:59:51.123979"], ["updated_at", "2024-10-11 19:59:51.123979"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user22@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.135870"], ["updated_at", "2024-10-11 19:59:51.135870"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "8f5d1e09"], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 2], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 2], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user23@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.140167"], ["updated_at", "2024-10-11 19:59:51.140167"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "123456"], ["created_at", "2024-10-11 19:59:51.141849"], ["updated_at", "2024-10-11 19:59:51.141849"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.143141"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.1ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 19:59:51.143927"], ["updated_at", "2024-10-11 19:59:51.143927"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.2ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.147803"], ["user_id", nil], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["created_at", "2024-10-11 19:59:51.148735"], ["updated_at", "2024-10-11 19:59:51.148735"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user24@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.152110"], ["updated_at", "2024-10-11 19:59:51.152110"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "123456"], ["created_at", "2024-10-11 19:59:51.153277"], ["updated_at", "2024-10-11 19:59:51.153277"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 19:59:51.154946"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 19:59:51.155654"], ["updated_at", "2024-10-11 19:59:51.155654"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user25@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 19:59:51.157455"], ["updated_at", "2024-10-11 19:59:51.157455"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (1.4ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user1@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.619316"], ["updated_at", "2024-10-11 20:00:24.619316"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN1"], ["created_at", "2024-10-11 20:00:24.631468"], ["updated_at", "2024-10-11 20:00:24.631468"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.1ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.632522"], ["updated_at", "2024-10-11 20:00:24.632522"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user2@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.673519"], ["updated_at", "2024-10-11 20:00:24.673519"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN2"], ["created_at", "2024-10-11 20:00:24.674670"], ["updated_at", "2024-10-11 20:00:24.674670"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.6ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.675457"], ["updated_at", "2024-10-11 20:00:24.675457"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user3@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.680508"], ["updated_at", "2024-10-11 20:00:24.680508"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN3"], ["created_at", "2024-10-11 20:00:24.681463"], ["updated_at", "2024-10-11 20:00:24.681463"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.682278"], ["updated_at", "2024-10-11 20:00:24.682278"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user4@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.685561"], ["updated_at", "2024-10-11 20:00:24.685561"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN4"], ["created_at", "2024-10-11 20:00:24.686576"], ["updated_at", "2024-10-11 20:00:24.686576"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.687671"], ["updated_at", "2024-10-11 20:00:24.687671"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user5@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.690404"], ["updated_at", "2024-10-11 20:00:24.690404"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN5"], ["created_at", "2024-10-11 20:00:24.691519"], ["updated_at", "2024-10-11 20:00:24.691519"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.692504"], ["updated_at", "2024-10-11 20:00:24.692504"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user6@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:24.695379"], ["updated_at", "2024-10-11 20:00:24.695379"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN6"], ["created_at", "2024-10-11 20:00:24.696214"], ["updated_at", "2024-10-11 20:00:24.696214"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:24.697101"], ["updated_at", "2024-10-11 20:00:24.697101"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "api_keys"[0m
+  [1m[35m (1.4ms)[0m  [1m[31mDELETE FROM "api_keys"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'api_keys';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mTRUNCATE TABLE "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "returned_devices"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "returned_devices"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'returned_devices';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mTRUNCATE TABLE "device_histories"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM "device_histories"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'device_histories';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user1@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.144680"], ["updated_at", "2024-10-11 20:00:45.144680"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user2@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.157906"], ["updated_at", "2024-10-11 20:00:45.157906"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.1ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 2], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.163406"], ["updated_at", "2024-10-11 20:00:45.163406"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 2], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#assign as HTML
+  Parameters: {"new_owner_id"=>"1", "serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unauthorized error: RegistrationError::Unauthorized
+Completed 422 Unprocessable Content in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1606)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user3@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.240646"], ["updated_at", "2024-10-11 20:00:45.240646"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.242047"], ["updated_at", "2024-10-11 20:00:45.242047"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#assign as HTML
+  Parameters: {"new_owner_id"=>"1", "serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms | Allocations: 597)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by DevicesController#assign as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApiKey Load (0.2ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms | Allocations: 388)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user4@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.254455"], ["updated_at", "2024-10-11 20:00:45.254455"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.255776"], ["updated_at", "2024-10-11 20:00:45.255776"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#unassign as HTML
+  Parameters: {"serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 617)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user5@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.262326"], ["updated_at", "2024-10-11 20:00:45.262326"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mApiKey Create (0.2ms)[0m  [1m[32mINSERT INTO "api_keys" ("bearer_id", "bearer_type", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["bearer_id", 1], ["bearer_type", "User"], ["token", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.263251"], ["updated_at", "2024-10-11 20:00:45.263251"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."bearer_id" = ? AND "api_keys"."bearer_type" = ? ORDER BY "api_keys"."id" ASC LIMIT ?[0m  [["bearer_id", 1], ["bearer_type", "User"], ["LIMIT", 1]]
+Processing by DevicesController#unassign as HTML
+  Parameters: {"serial_number"=>"123456"}
+  [1m[36mApiKey Load (0.0ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" = ? LIMIT ?[0m  [["token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 619)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by DevicesController#unassign as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApiKey Load (0.1ms)[0m  [1m[34mSELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."token" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms | Allocations: 316)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user6@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.282317"], ["updated_at", "2024-10-11 20:00:45.282317"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN1"], ["created_at", "2024-10-11 20:00:45.289248"], ["updated_at", "2024-10-11 20:00:45.289248"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.290774"], ["updated_at", "2024-10-11 20:00:45.290774"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user7@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.294643"], ["updated_at", "2024-10-11 20:00:45.294643"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN2"], ["created_at", "2024-10-11 20:00:45.295957"], ["updated_at", "2024-10-11 20:00:45.295957"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.296765"], ["updated_at", "2024-10-11 20:00:45.296765"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user8@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.299815"], ["updated_at", "2024-10-11 20:00:45.299815"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN3"], ["created_at", "2024-10-11 20:00:45.300741"], ["updated_at", "2024-10-11 20:00:45.300741"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.1ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.301436"], ["updated_at", "2024-10-11 20:00:45.301436"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user9@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.304100"], ["updated_at", "2024-10-11 20:00:45.304100"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN4"], ["created_at", "2024-10-11 20:00:45.305095"], ["updated_at", "2024-10-11 20:00:45.305095"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.305896"], ["updated_at", "2024-10-11 20:00:45.305896"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user10@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.308547"], ["updated_at", "2024-10-11 20:00:45.308547"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN5"], ["created_at", "2024-10-11 20:00:45.309536"], ["updated_at", "2024-10-11 20:00:45.309536"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.310344"], ["updated_at", "2024-10-11 20:00:45.310344"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user11@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.313370"], ["updated_at", "2024-10-11 20:00:45.313370"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "SN6"], ["created_at", "2024-10-11 20:00:45.314289"], ["updated_at", "2024-10-11 20:00:45.314289"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.315011"], ["updated_at", "2024-10-11 20:00:45.315011"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user17@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.332985"], ["updated_at", "2024-10-11 20:00:45.332985"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user18@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.335031"], ["updated_at", "2024-10-11 20:00:45.335031"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user19@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.337421"], ["updated_at", "2024-10-11 20:00:45.337421"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.1ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "21ab36a2"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.2ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "21ab36a2"], ["created_at", "2024-10-11 20:00:45.338947"], ["updated_at", "2024-10-11 20:00:45.338947"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.340872"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.341704"], ["updated_at", "2024-10-11 20:00:45.341704"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Pluck (0.1ms)[0m  [1m[34mSELECT "devices"."serial_number" FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user20@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.347712"], ["updated_at", "2024-10-11 20:00:45.347712"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "37870e61"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "37870e61"], ["created_at", "2024-10-11 20:00:45.348864"], ["updated_at", "2024-10-11 20:00:45.348864"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.2ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.350099"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.359335"], ["updated_at", "2024-10-11 20:00:45.359335"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "37870e61"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.360502"], ["user_id", nil], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.1ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["created_at", "2024-10-11 20:00:45.361243"], ["updated_at", "2024-10-11 20:00:45.361243"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user21@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.364499"], ["updated_at", "2024-10-11 20:00:45.364499"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "9b65e87c"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "9b65e87c"], ["created_at", "2024-10-11 20:00:45.365536"], ["updated_at", "2024-10-11 20:00:45.365536"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.5ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.366811"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.367934"], ["updated_at", "2024-10-11 20:00:45.367934"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user22@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.369482"], ["updated_at", "2024-10-11 20:00:45.369482"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "9b65e87c"], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 2], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 2], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user23@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.373490"], ["updated_at", "2024-10-11 20:00:45.373490"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "123456"], ["created_at", "2024-10-11 20:00:45.374552"], ["updated_at", "2024-10-11 20:00:45.374552"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.375746"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.376765"], ["updated_at", "2024-10-11 20:00:45.376765"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.379782"], ["user_id", nil], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.3ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["created_at", "2024-10-11 20:00:45.380464"], ["updated_at", "2024-10-11 20:00:45.380464"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "devices" WHERE "devices"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user24@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.383423"], ["updated_at", "2024-10-11 20:00:45.383423"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Create (0.1ms)[0m  [1m[32mINSERT INTO "devices" ("serial_number", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["serial_number", "123456"], ["created_at", "2024-10-11 20:00:45.384401"], ["updated_at", "2024-10-11 20:00:45.384401"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["LIMIT", 1]]
+  [1m[36mDeviceHistory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "device_histories" WHERE "device_histories"."user_id" = ? AND "device_histories"."device_id" = ? AND "device_histories"."action" = ? LIMIT ?[0m  [["user_id", 1], ["device_id", 1], ["action", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDevice Update (0.1ms)[0m  [1m[33mUPDATE "devices" SET "updated_at" = ?, "user_id" = ? WHERE "devices"."id" = ?[0m  [["updated_at", "2024-10-11 20:00:45.385925"], ["user_id", 1], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mDeviceHistory Create (0.2ms)[0m  [1m[32mINSERT INTO "device_histories" ("user_id", "device_id", "action", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 1], ["device_id", 1], ["action", 0], ["created_at", "2024-10-11 20:00:45.386604"], ["updated_at", "2024-10-11 20:00:45.386604"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "user25@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2024-10-11 20:00:45.388155"], ["updated_at", "2024-10-11 20:00:45.388155"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mDevice Load (0.0ms)[0m  [1m[34mSELECT "devices".* FROM "devices" WHERE "devices"."serial_number" = ? LIMIT ?[0m  [["serial_number", "123456"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
